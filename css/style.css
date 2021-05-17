@@ -71,11 +71,88 @@ nav {
 .works-block{
   max-width: 100px;
 }
-.a{
-  border: blue 2px solid;
-  background-color: blue;
-  color: white;
+.nav-menu{
   list-style:none;
+}
+
+h2 {
+  margin-bottom: .5em;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+
+/* hover styles */
+.location-listing {
+  position: relative
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(27, 0, 146, 0.185);
+  color: white;
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+@media (hover: none) { 
+  .location-title {
+    opacity: 0;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+
+.a{
+  font-family: "font";
+  text-decoration: none;
+  font-size: 21px;
+  background-color: black;
+  color: white;
+  list-style: none;
+}
+.a:hover{
+border-right: white 2px solid;
+border-left: white 2px solid;
+color: rgb(175, 175, 175);
+transition: 0.5s;
 }
 
 .main_image {
@@ -146,12 +223,14 @@ nav {
 
 .grid-container {
   display: grid;
-  grid-row-gap: 10px;
+  grid-row-gap: 100px;
 }
 
 .work-1 {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
+  width: 10px;
+  height: 10px;
 }
 
 .work {
