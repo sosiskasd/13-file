@@ -1,7 +1,7 @@
 * {
   margin: 0;
 }
-li {
+ul {
   list-style: none;
 }
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
@@ -71,27 +71,12 @@ nav {
 .works-block{
   max-width: 100px;
 }
-
-/* a {
-  border: 2mm ridge #0d7377;
-  list-style: none;
-  padding: 0px;
-  margin: 100px 10px 10px 10px;
+.a{
+  border: blue 2px solid;
+  background-color: blue;
+  color: white;
+  list-style:none;
 }
-a:hover {
-  border: 2.5mm ridge #00a1a7;
-}
-ul {
-  margin-bottom: 100px;
-}
-.discord {
-  display: flex;
-  flex-direction: row;
-}
-.discord2 {
-  font-size: 30px;
-  color: #690000;
-} */
 
 .main_image {
   padding: 0;
